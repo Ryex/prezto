@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'pacman' \
   'git' \
   'syntax-highlighting' \
   'prompt'
@@ -106,7 +107,7 @@ zstyle ':prezto:module:git:status:ignore' submodules 'dirty'
 #
 
 # Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:pacman' frontend 'yay'
 
 #
 # Prompt
