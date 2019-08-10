@@ -644,7 +644,11 @@ fi
 
 
   typeset -g POWERLEVEL9K_LOAD_WHICH=5
+  typeset -g POWERLEVEL9K_LOAD_NORMAL_FOREGROUND=10
+  typeset -g POWERLEVEL9K_LOAD_WARNING_FOREGROUND=11
+  typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=9
   typeset -g POWERLEVEL9K_RAM_ELEMENTS='both'
+  typeset -g POWERLEVEL9K_RAM_FOREGROUND=7
 }
 
 (( ! p9k_classic_restore_aliases )) || setopt aliases
