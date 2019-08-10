@@ -42,7 +42,7 @@ fi
       vcs                     # git status
       # =========================[ Line #2 ]=========================
       newline
-      # prompt_char           # prompt symbol
+      prompt_char             # prompt symbol
   )
 
   # The list of segments shown on the right. Fill it with less important segments.
@@ -60,19 +60,24 @@ fi
       nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
       nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
       nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-      # node_version          # node.js version
-      # go_version            # golang version
-      # rbenv                 # ruby version from rbenv (https://github.com/rbenv/rbenv)
+      node_version            # node.js version
+      go_version              # golang version
+      rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
       kubecontext             # current kubernetes context (https://kubernetes.io/)
       context                 # user@host
       nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
+      #rust_version            # display current rust version and logo
+      load                    # your machine's load averages
+      ram                     # show free RAM
       # =========================[ Line #2 ]=========================
       newline
       # public_ip             # public IP address
       # battery               # internal battery
-      # time                  # current time
+      time                    # current time
       # example               # example user-defined segment (see prompt_example function below)
   )
+
+
 
   # To disable default icons for all segments, set POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION=''.
   #
@@ -636,6 +641,10 @@ fi
   # User-defined prompt segments can be customized the same way as built-in segments.
   typeset -g POWERLEVEL9K_EXAMPLE_FOREGROUND=208
   typeset -g POWERLEVEL9K_EXAMPLE_VISUAL_IDENTIFIER_EXPANSION='${P9K_VISUAL_IDENTIFIER}'
+
+
+  typeset -g POWERLEVEL9K_LOAD_WHICH=5
+  typeset -g POWERLEVEL9K_RAM_ELEMENTS='both'
 }
 
 (( ! p9k_classic_restore_aliases )) || setopt aliases
