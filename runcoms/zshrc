@@ -47,3 +47,24 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# compleations for git-extras
+source ~/.zsh_compleation/git-extras-completion.zsh
+
+# GO PATHS
+
+export GOBIN=~/go/bin
+
+export PATH=$GOBIN:$PATH
+
+# gopass
+eval `gopass completion zsh`
+
+# cargo bin path
+export CARGOBIN=~/.cargo/bin
+export PATH=$CARGOBIN:$PATH
+
+# poetry path
+export POETRYBIN=~/.poetry/bin
+export PATH=$POETRYBIN:$PATH
+
